@@ -1,0 +1,17 @@
+{
+	"name": "frontend-frameworks",
+	"version": "1.0.0",
+	"repository": "https://github.com/itswagi/frontend-frameworks.git",
+	"author": "Wajahat <a03435591704@gmail.com>",
+	"license": "MIT",
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"start": "lerna run start"
+	},
+	"devDependencies": {
+		"lerna": "^4.0.0",
+		"typescript": "^4.6.3"
+	}
+}
