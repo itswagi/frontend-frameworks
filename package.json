@@ -4,11 +4,12 @@
 	"repository": "https://github.com/itswagi/frontend-frameworks.git",
 	"author": "Wajahat <a03435591704@gmail.com>",
 	"license": "MIT",
+	"private": true,
 	"workspaces": [
 		"packages/*"
 	],
 	"scripts": {
-		"start": "lerna run start"
+		"start-context": "lerna run start --scope using-context"
 	},
 	"devDependencies": {
 		"lerna": "^4.0.0",
