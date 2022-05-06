@@ -1,3 +1,4 @@
 export enum RoutePaths {
-  HOME = '/'
+  HOME = '/',
+  ERROR = '/error'
 }
