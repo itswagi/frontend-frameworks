@@ -33,16 +33,16 @@ export const Post: FC<PostProps> =
     return `${timeSincePostedInMins} m`
   }
   return (
-    <PostWrapper className="max-w-md w-full border-2 rounded-sm border-sky-900 px-3 py-2">
+    <PostWrapper className="max-w-md w-full px-3 py-3">
       <PostContentContainer className="flex">
         <PostAuthorImageContainer className="flex shrink-0 justify-center mt-2">
           <AuthorImage className="bg-slate-400 w-12 h-12 rounded-full flex justify-center items-center shrink-0">Img</AuthorImage>
         </PostAuthorImageContainer>
         <PostContent className="text-white ml-3">
-          <PostAuthorDetails className="flex gap-x-2 font-medium text-gray-500 text-xs">
-            <AuthorId>@{username}</AuthorId>
+          <PostAuthorDetails className="flex gap-x-2 font-medium text-xs mb-1">
             <AuthorName>{name}</AuthorName>
-            <PostTime>{timePublished(dateCreated)}</PostTime>
+            <AuthorId className="text-secondary">@{username}</AuthorId>
+            <PostTime className="text-secondary">{timePublished(dateCreated)}</PostTime>
           </PostAuthorDetails>
           <PostText className="text-sm">
             {content}

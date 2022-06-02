@@ -1,4 +1,18 @@
-export const MockPostData = [
+export type PostDataAuthorType = {
+  id: string;
+  username: string;
+  name: string;
+  displayPicture: string;
+}
+
+export type PostDataType = {
+  id: number;
+  author: PostDataAuthorType;
+  content: string;
+  dateCreated: string;
+}
+
+export const MockPostData: PostDataType[] = [
   {
     id: 1,
     author: {

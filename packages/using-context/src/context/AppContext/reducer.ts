@@ -1,12 +1,29 @@
 import { State, Action, ActionType } from "./types"
 
+// export const appReducer = (draft: State, action: Action) => {
+//   switch(action.type) {
+//     case ActionType.ADD_FETCHED_POSTS: {
+//       if( !draft.posts?.length ) {
+//         draft.posts = [ ...action.payload ]
+//         break;
+//       } else {
+//         draft.posts = [ ...draft.posts, ...action.payload ]
+//         break;
+//       }
+//     }
+//   }
+// }
+
 export function appReducer(state: State, action: Action) {
   switch (action.type) {
-    case ActionType.INCREMENT: {
-      return {count: state.count + 1}
-    }
-    case ActionType.DECREMENT: {
-      return {count: state.count - 1}
+    case ActionType.ADD_FETCHED_POSTS: {
+      return {
+        ...state,
+       posts: [
+         ...state.posts,
+         ...action.payload
+       ]
+      }
     }
   }
 }
